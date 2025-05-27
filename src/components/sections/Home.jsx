@@ -12,7 +12,7 @@ export const Home = () => {
             className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-[#7d6353] to-[#3f322b]
         bg-clip-text text-transparent leading-right"
           >
-            Hi, I'm Renna T K
+            I'm Renna T K
           </h1>
           <p className="text-[#4e4640] text-sm mb-8 max-w-lg mx-auto">
             A Full-Stack Developer blending design and logic for seamless
