@@ -1,12 +1,54 @@
 @import "tailwindcss";
 
+:root {
+  --color-bg: #f5f3f0;
+  --color-text: #3f322b;
+  --color-accent: #7d6353;
+  --color-card: #fff;
+  --color-border: #e0d6ce;
+}
+
+[data-theme="dark"] {
+  --color-bg: #20232a;
+  --color-text: #e0e0e0; /* Softer off-white for body text */
+  --color-accent: #bfa074; /* Light brown accent */
+  --color-heading: #e2c9a0; /* Lighter brown for headings */
+  --color-card: #282c34;
+  --color-border: #444857;
+}
+
 html,
 body {
   margin: 0;
   padding: 0;
   font-family: "Space Grotesk", sans-serif;
-  background: #efefe9;
-  color: #223030;
+  background: var(--color-bg);
+  color: var(--color-text);
+  transition: background 0.3s, color 0.3s;
+}
+
+section, .card, .rounded-xl {
+  background: var(--color-card);
+  border-color: var(--color-border);
+  transition: background 0.3s, border-color 0.3s;
+}
+
+a, button {
+  color: var(--color-accent);
+  transition: color 0.3s;
+}
+
+a:hover, button:hover {
+  color: #e2c9a0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--color-accent);
+  letter-spacing: 0.5px;
+}
+
+[data-theme="dark"] h1, [data-theme="dark"] h2, [data-theme="dark"] h3, [data-theme="dark"] h4, [data-theme="dark"] h5, [data-theme="dark"] h6 {
+  color: var(--color-heading);
 }
 
 @layer utilities {
@@ -38,13 +80,33 @@ body {
   }
 }
 
-.reveal {
+/* Fallback: Only hide .reveal if JS is enabled (no .no-js on body) */
+.no-js .reveal {
+  opacity: 1 !important;
+  transform: none !important;
+}
+body:not(.no-js) .reveal {
   opacity: 0;
   transform: translateY(20px);
   transition: opacity 0.7s ease, transform 0.7s ease;
 }
-
-.reveal.visible {
+body:not(.no-js) .reveal.visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* Subtle fade-in animation for sections */
+.reveal.visible {
+  animation: fadeInUp 0.7s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

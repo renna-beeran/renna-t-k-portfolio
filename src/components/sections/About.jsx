@@ -1,5 +1,6 @@
 import { RevealOnScroll } from "../RevealOnScroll";
 import { SkillSet } from "./SkillSet";
+import profilePhoto from "../../assets/Photo_Renna.png";
 
 export const About = () => {
   const frontendSkills = [
@@ -30,6 +31,38 @@ export const About = () => {
           <h2 className="text-3xl font-bold mb-8 bg-gradient-to-r from-[#7d6353] to-[#3f322b] bg-clip-text text-transparent text-center">
             About Me
           </h2>
+          <div className="flex flex-col md:flex-row items-center md:items-start gap-8 mb-8">
+            <img
+              src={profilePhoto}
+              alt="Renna T K"
+              className="w-32 h-32 rounded-full object-cover object-top border-4 border-[#bfa074] shadow-lg mb-4 md:mb-0 mt-6"
+            />
+            <div className="flex-1 text-[#ac9c8d] text-lg">
+              <p className="mb-4">
+                Hi, I'm{" "}
+                <span className="font-bold text-[#bfa074]">Renna T K</span> — a
+                passionate Java Full Stack Developer who loves building clean,
+                efficient, and impactful web applications. My journey began with a
+                curiosity for how things work, which soon turned into a drive to
+                create solutions that make a difference.
+              </p>
+              <p className="mb-4">
+                <span className="font-semibold text-[#bfa074]">Values: </span>
+                Integrity, continuous learning, and collaboration. I believe in
+                writing code that is not just functional, but also maintainable
+                and scalable.
+              </p>
+              <p className="mb-4">
+                <span className="font-semibold text-[#bfa074]">Goals:</span> To
+                contribute to innovative projects, grow as a developer, and help
+                teams deliver exceptional digital experiences.
+              </p>
+              <p>
+                Outside of coding, I enjoy exploring new technologies, reading,
+                and connecting with like-minded professionals.
+              </p>
+            </div>
+          </div>
           <div className="rounded-xl p-8 border-[#67605b]/10 border hover:-translate-y-1 transition-all">
             <p className="text-[#ac9c8d] mb-6">
               Result-oriented Java Full Stack Developer with 1+ years of
