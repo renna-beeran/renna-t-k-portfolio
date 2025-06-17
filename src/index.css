@@ -1,20 +1,25 @@
 @import "tailwindcss";
 
 :root {
-  --color-bg: #f5f3f0;
-  --color-text: #3f322b;
-  --color-accent: #7d6353;
-  --color-card: #fff;
-  --color-border: #e0d6ce;
+  --color-bg: #efefe9; /* match LandingPage bg */
+  --color-text: #322d29;
+  --color-accent: #72383d;
+  --color-accent2: #ac9c8d;
+  --color-card: #efe9e1;
+  --color-border: #ac9c8d;
+  --color-link: #72383d;
+  --color-muted: #d1c7bd;
 }
 
 [data-theme="dark"] {
-  --color-bg: #20232a;
-  --color-text: #e0e0e0; /* Softer off-white for body text */
-  --color-accent: #bfa074; /* Light brown accent */
-  --color-heading: #e2c9a0; /* Lighter brown for headings */
-  --color-card: #282c34;
-  --color-border: #444857;
+  --color-bg: #005f73; /* soft teal for dark background */
+  --color-text: #94d2bd;
+  --color-accent: #0a9396;
+  --color-accent2: #83c5be;
+  --color-card: #001219;
+  --color-border: #006d77;
+  --color-link: #94d2bd;
+  --color-muted: #163136; /* darker muted for dark mode */
 }
 
 html,
@@ -33,51 +38,22 @@ section, .card, .rounded-xl {
   transition: background 0.3s, border-color 0.3s;
 }
 
-a, button {
-  color: var(--color-accent);
-  transition: color 0.3s;
-}
-
-a:hover, button:hover {
-  color: #e2c9a0;
-}
-
 h1, h2, h3, h4, h5, h6 {
   color: var(--color-accent);
   letter-spacing: 0.5px;
 }
 
 [data-theme="dark"] h1, [data-theme="dark"] h2, [data-theme="dark"] h3, [data-theme="dark"] h4, [data-theme="dark"] h5, [data-theme="dark"] h6 {
-  color: var(--color-heading);
+  color: var(--color-accent2);
 }
 
-@layer utilities {
-  @keyframes blink {
-    0%,
-    100% {
-      opacity: 1;
-    }
-    50% {
-      opacity: 0;
-    }
-  }
+a, button {
+  color: var(--color-link);
+  transition: color 0.3s;
+}
 
-  .animate-blink {
-    animation: blink 0.8s step-end infinite;
-  }
-
-  @keyframes loading {
-    0% {
-      transform: translateX(-100%);
-    }
-    100% {
-      transform: translateX(250%);
-    }
-  }
-
-  .animate-loading-bar {
-    animation: loading 0.8s ease infinite;
-  }
+a:hover, button:hover {
+  color: var(--color-accent2);
 }
 
 /* Fallback: Only hide .reveal if JS is enabled (no .no-js on body) */
@@ -109,4 +85,16 @@ body:not(.no-js) .reveal.visible {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+/* Placeholder color for dark mode */
+[data-theme="dark"] ::placeholder {
+  color: #4db6ac !important; /* soft teal, readable on dark muted */
+  opacity: 1;
+}
+
+/* Placeholder color for light mode */
+::placeholder {
+  color: #ac9c8d;
+  opacity: 1;
 }

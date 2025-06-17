@@ -24,7 +24,7 @@ export const LandingPage = ({ onComplete }) => {
   }, [onComplete]);
 
   return (
-    <div className="fixed inset-0 zet-50 bg-[#efefe9] text-[#223030]-100 flex flex-col items-center justify-center">
+    <div className="fixed inset-0 zet-50 bg-[var(--color-bg)] text-[#223030]-100 flex flex-col items-center justify-center">
       <div className="mb-4 text-5xl font-mono font-bold tracking-wide text-[#2a2d34]">
         {text} <span className="animate-blink ml-1">|</span>
       </div>

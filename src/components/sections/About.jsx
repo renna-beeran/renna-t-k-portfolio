@@ -28,32 +28,32 @@ export const About = () => {
     >
       <RevealOnScroll>
         <div className="max-w-3xl mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-8 bg-gradient-to-r from-[#7d6353] to-[#3f322b] bg-clip-text text-transparent text-center">
+          <h2 className="text-3xl font-bold mb-8 text-center bg-gradient-to-r from-[var(--color-accent)] to-[var(--color-accent2)] bg-clip-text text-transparent">
             About Me
           </h2>
           <div className="flex flex-col md:flex-row items-center md:items-start gap-8 mb-8">
             <img
               src={profilePhoto}
               alt="Renna T K"
-              className="w-32 h-32 rounded-full object-cover object-top border-4 border-[#bfa074] shadow-lg mb-4 md:mb-0 mt-6"
+              className="w-32 h-32 rounded-full object-cover object-top border-4 border-[var(--color-accent2)] shadow-lg mb-4 md:mb-0 mt-6 bg-[var(--color-card)]"
             />
-            <div className="flex-1 text-[#ac9c8d] text-lg">
+            <div className="flex-1 text-[var(--color-text)] text-lg text-justify">
               <p className="mb-4">
                 Hi, I'm{" "}
-                <span className="font-bold text-[#bfa074]">Renna T K</span> — a
+                <span className="font-bold text-[var(--color-accent)]">Renna T K</span> — a
                 passionate Java Full Stack Developer who loves building clean,
                 efficient, and impactful web applications. My journey began with a
                 curiosity for how things work, which soon turned into a drive to
                 create solutions that make a difference.
               </p>
               <p className="mb-4">
-                <span className="font-semibold text-[#bfa074]">Values: </span>
+                <span className="font-semibold text-[var(--color-accent)]">Values: </span>
                 Integrity, continuous learning, and collaboration. I believe in
                 writing code that is not just functional, but also maintainable
                 and scalable.
               </p>
               <p className="mb-4">
-                <span className="font-semibold text-[#bfa074]">Goals:</span> To
+                <span className="font-semibold text-[var(--color-accent)]">Goals:</span> To
                 contribute to innovative projects, grow as a developer, and help
                 teams deliver exceptional digital experiences.
               </p>
@@ -63,8 +63,8 @@ export const About = () => {
               </p>
             </div>
           </div>
-          <div className="rounded-xl p-8 border-[#67605b]/10 border hover:-translate-y-1 transition-all">
-            <p className="text-[#ac9c8d] mb-6">
+          <div className="rounded-xl p-8 border-[var(--color-border)] border hover:-translate-y-1 transition-all bg-[var(--color-card)]">
+            <p className="text-[var(--color-text)] mb-6">
               Result-oriented Java Full Stack Developer with 1+ years of
               experience in designing and developing scalable web applications
               using React.js, Spring Boot, and REST APIs. Proficient in

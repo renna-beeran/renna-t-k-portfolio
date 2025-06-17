@@ -33,7 +33,7 @@ export const Contact = () => {
     >
       <RevealOnScroll>
         <div className="px-4 w-full min-w-[300px] md:w-[500px] sm:w-2/3 p-6">
-          <h2 className="text-3xl font-bold mb-8 bg-gradient-to-r from-[#7d6353] to-[#3f322b] bg-clip-text text-transparent text-center">
+          <h2 className="text-3xl font-bold mb-8 text-center bg-gradient-to-r from-[var(--color-accent)] to-[var(--color-accent2)] bg-clip-text text-transparent">
             Get In Touch
           </h2>
           <form className="space-y-6" onSubmit={handleSubmit}>
@@ -44,7 +44,7 @@ export const Contact = () => {
                 name="name"
                 required
                 value={formData.name}
-                className="w-full bg-[#ac9c8d]/10 border border-[#67605b]/10 rounded px-4 py-3 text-black transition focus:outline-none focus:border-[#72383d] focus:bg-[#72383d]/5"
+                className="w-full bg-[var(--color-muted)] border border-[var(--color-border)] rounded px-4 py-3 text-[var(--color-text)] transition focus:outline-none focus:border-[var(--color-accent)] focus:bg-[var(--color-card)]"
                 placeholder="Your Name"
                 onChange={(e) =>
                   setFormData({ ...formData, name: e.target.value })
@@ -59,7 +59,7 @@ export const Contact = () => {
                 name="email"
                 required
                 value={formData.email}
-                className="w-full bg-[#ac9c8d]/10 border border-[#67605b]/10 rounded px-4 py-3 text-black transition focus:outline-none focus:border-[#72383d] focus:bg-[#72383d]/5"
+                className="w-full bg-[var(--color-muted)] border border-[var(--color-border)] rounded px-4 py-3 text-[var(--color-text)] transition focus:outline-none focus:border-[var(--color-accent)] focus:bg-[var(--color-card)]"
                 placeholder="example@gmail.com"
                 onChange={(e) =>
                   setFormData({ ...formData, email: e.target.value })
@@ -74,7 +74,7 @@ export const Contact = () => {
                 required
                 rows={5}
                 value={formData.message}
-                className="w-full bg-[#ac9c8d]/10 border border-[#67605b]/10 rounded px-4 py-3 text-black transition focus:outline-none focus:border-[#72383d] focus:bg-[#72383d]/5"
+                className="w-full bg-[var(--color-muted)] border border-[var(--color-border)] rounded px-4 py-3 text-[var(--color-text)] transition focus:outline-none focus:border-[var(--color-accent)] focus:bg-[var(--color-card)]"
                 placeholder="Your Message"
                 onChange={(e) =>
                   setFormData({ ...formData, message: e.target.value })
@@ -84,7 +84,8 @@ export const Contact = () => {
 
             <button
               type="submit"
-              className="w-full bg-[#72383d] text-[#efefe9] py-3 px-6 rounded font-medium transition relative overflow-hidden hover:-translate-y-0.5 hover:shadow-[0_0_15px_rgba(59, 130, 246, 0.4)] hover:bg-[#a34e56]"
+              className="w-full bg-[var(--color-accent)] py-3 px-6 rounded font-medium transition relative overflow-hidden hover:-translate-y-0.5 hover:shadow-[0_0_15px_rgba(114,56,61,0.4)] hover:bg-[var(--color-accent2)]"
+              style={{ color: "#fff" }}
             >
               Send Message
             </button>
